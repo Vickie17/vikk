@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Task 3</title>
+</head>
+<body>
+    <script>
+        function myParameter (count) {
+            let arrayN =[];
+            for (let number = 1; number <= count; number ++ ) {
+                let accumulator = ""
+                if (number % 5===0 || number % 3===0 || number % 2===0){
+                    if (number % 2===0) {
+                        if (accumulator!="")
+                        accumulator+='-yu'
+                        else {
+                            accumulator='yu'
+                        }
+                    }
+                    if (number % 3===0) {
+                        if (accumulator!="")
+                        accumulator+='-gi'
+                        else {
+                            accumulator='gi'
+                        }
+                    }
+                }
+                if (number % 5===0) {
+                    if (accumulator!="")
+                    accumulator+='-oh'
+                    else {
+                        accumulator='oh'
+                    }
+                    }
+            else {
+                accumulator=number
+            }
+            arrayN.push (accumulator)
+        }
+        console.log (arrayN);       
+        }
+        myParameter(100)
+        myParameter(40)
+
+    </script>
+    
+</body>
+</html>
